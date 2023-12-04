@@ -1,13 +1,18 @@
 # ics625project3
  Manage courses using Spring MVC and JPA with database.
  
- Project 3:
+## Project 3:
 Write a Spring MVC application that allows users to manage courses.  The user should be able to view all courses, add a new course, and view details of a course.  Your program should use a backend database to store the courses.
 
 Below are examples of what your UI will look like.  Your interface does not have to be pretty but they need to be functional.  
 
 ![View courses screenshot.](Picture1.png)
- 	 
+
+![Add course form screenshot](Picture2.png)
+
+![Update course form screenshot]](Picture3.png)
+
+![Details course form screenshot]](Picture4.png)
 
 The Course class has the following properties:
 ``` java
