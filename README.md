@@ -10,9 +10,9 @@ Below are examples of what your UI will look like.  Your interface does not have
 
 ![Add course form screenshot](Picture2.png)
 
-![Update course form screenshot]](Picture3.png)
+![Update course form screenshot](Picture3.png)
 
-![Details course form screenshot]](Picture4.png)
+![Details course form screenshot](Picture4.png)
 
 The Course class has the following properties:
 ``` java
