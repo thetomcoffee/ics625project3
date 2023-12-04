@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 
-<html>
+<html
+    lang="en"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    >
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,8 +39,9 @@
                         <td th:text="${course.title}"></td>
                         <td th:text="${course.offered}"></td>
                         <td>
-                          <a th:href="@{/courses/{id}/update(id = ${course.id})}">update</a> | 
-                          <a th:href="@{/courses/{id}/details(id = ${course.id})}">details</a>
+                          <a th:href="@{/update/{id}(id = ${course.id})}">update</a> | 
+                          <a th:href="@{/details/{id}(id = ${course.id})}">details</a> | 
+                          <a th:href="@{/delete/{id}(id = ${course.id})}">delete</a>
                         </td>
                   </tr>
                 </tbody>

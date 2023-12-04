@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html
+    lang="en"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    >
+
+    <head>
+        <title>Update Course</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Update Course</h1>
+        </header>
+        <div>
+            <form method="post" th:action="@{/courses/update/{id}(id = ${course.id})}" th:object="${course}" >
+                <label for="subject">Subject: </label>
+                <input class="form-control"  type="text" name="subject" id="subject" th:value="${course.subject}" />
+                <br />
+                <label for="number">Number: </label>
+                <input class="form-control"  type="text" name="number" id="number" th:value="${course.number}" />
+                <br />
+                <label for="title">Title:</label>
+                <input class="form-control" type="text" name="title" id="title" th:value="${course.title}" />
+                <br />
+                <label for="credits">Credits: </label>
+                <input class="form-control" type="number" name="credits" id="credits" min="1" max="12" th:value="${course.credits}" />
+                <br />
+                <label for="offered">Offered</label>
+                <input class="form-control" type="checkbox" name="offered" id="offerd" th:checked="${course.offered}" />
+                <br />
+                <label for="description">Description: </label>
+                <textarea class="form-control" name="description" id="description" th:field="${course.description}"></textarea>  
+                <br />
+                <input  type="submit" name="update" value="update" />
+            </form>
+             <p><a th:href="@{/courses}">Back to courses list</a></p>
+        </div>
+    </body>
+</html>

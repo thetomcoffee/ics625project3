@@ -48,13 +48,23 @@ public class CourseService {
         repo.deleteById(id);
     }
     
-    public void update(long id, String number, String title, boolean offered){
+    public void update(long id, 
+            String subject, 
+            String number, 
+            String title, 
+            boolean offered, 
+            String description, 
+            int credits){
         Optional<Course> op = repo.findById(id);
         if (op.isEmpty()) return;
+        
         Course c = op.get();
+        c.setSubject(subject);
         c.setNumber(number);
         c.setTitle(title);
         c.setOffered(offered);
+        c.setCredits(credits);
+        c.setDescription(description);
         repo.save(c);
     }
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html
+    lang="en"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Course Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Course Details</h1>
+        </header>
+        <div id="courseDiv">
+            <p>
+                Subject: <span th:text="${course.subject}"></span>
+                <br />
+                Number: <span th:text="${course.number}"></span>
+                <br />
+                Title: <span th:text="${course.title}"></span>
+                <br />
+                Credits: <span th:text="${course.credits}"></span>
+                <br />
+                Offered: <span th:text="${course.offered}"></span>
+                <br />
+                Description: <span th:text="${course.description}"></span>
+            </p>
+        </div>
+        <div id="linkBackDiv">
+            <p><a th:href="@{/courses}">Back to courses list</a></p>
+        </div>
+    </body>
+</html>
