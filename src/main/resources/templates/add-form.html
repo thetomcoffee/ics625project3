@@ -10,6 +10,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div><h1>Add Course</h1></div>
+        <header><h1>Add Course</h1></header>
+        <div>
+            <form method="post" th:action="@{/courses/add}" >
+                <label for="subject">Subject: </label>
+                <input class="form-control"  type="text" name="subject" id="subject" />
+                <br />
+                <label for="number">Number: </label>
+                <input class="form-control"  type="text" name="number" id="number" />
+                <br />
+                <label for="title">Title:</label>
+                <input class="form-control" type="text" name="title" id="title" />
+                <br />
+                <label for="credits">Credits: </label>
+                <input class="form-control" type="number" name="credits" id="credits" min="1" max="12" />
+                <br />
+                <label for="offered">Offered</label>
+                <input class="form-control" type="checkbox" name="offered" id="offerd" />
+                <br />
+                <label for="description">Description: </label>
+                <textarea class="form-control" name="description" id="description"></textarea>  
+                <br />
+                <input  type="submit" name="add" value="add" />
+            </form>
+        </div>
     </body>
 </html>
